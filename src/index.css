@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom minimal styling to better match poster */
+html, body, #root { height: 100%; }

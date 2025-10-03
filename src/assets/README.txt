@@ -1,0 +1,1 @@
+This folder contains images used by the project. 1.png is the event banner image.
