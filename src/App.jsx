@@ -1,27 +1,29 @@
 import React, { useState } from 'react';
-import robotImage from './assets/1.png';
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('Palestras');
 
   const eventsData = {
     Palestras: [
-      { id: 1, time: '9:30h - 10:30h', title: 'Rota Norte da IA: Por que o AI Center da VALE em Belém muda o mapa da inovação para o mundo.', location: 'Auditório', speaker: 'Equipe VALE', color: 'bg-amber-600' },
-      { id: 2, time: '11:00h - 12:00h', title: 'Do CESUPA pro Squad: Trajetórias reais de alunos contratados pela DTI.', location: 'Auditório', speaker: 'Equipe DTI', color: 'bg-blue-600' },
-      { id: 3, time: '14:00h - 15:00h', title: 'Palestra Verde (Online)', location: 'Auditório', speaker: 'Victor Hugo Gomes', color: 'bg-green-600' },
-      { id: 4, time: '15:00h - 16:00h', title: 'Construindo Espaços: A relevância da BELJOGOS no cenário GameDev BR', location: 'Auditório', speaker: 'BELJOGOS', color: 'bg-red-600' },
-      { id: 5, time: '16:00h - 17:00h', title: 'Porto Digital de Recife: Como criar um Polo Global de Inovação', location: 'Auditório', speaker: 'Porto Digital', color: 'bg-pink-600' },
-      { id: 6, time: '17:30h - 18:30h', title: 'Palestra Accenture', location: 'Auditório', speaker: 'Accenture', color: 'bg-purple-600' }
+      { id: 1, time: '09:30h - 10:30h', title: 'Rota Norte da IA: Por que o AI Center da VALE em Belém muda o mapa da inovação para o mundo.', location: 'Auditório', speaker: 'VALE', color: 'bg-amber-600' },
+      { id: 2, time: '11:00h - 12:00h', title: 'Do CESUPA pro Squad: Trajetórias reais de alunos contratados pela DTI.', location: 'Auditório', speaker: 'DTI', color: 'bg-blue-600' },
+      { id: 3, time: '14:00h - 15:00h', title: 'Customer 360 com propósito: como Accenture acelera valor no Salesforce.', location: 'Auditório', speaker: 'Accenture', color: 'bg-green-600' },
+      { id: 4, time: '15:00h - 16:00h', title: 'Construindo Espaços: A relevância da BELJOGOS no cenário GameDev BR.', location: 'Auditório', speaker: 'BELJOGOS', color: 'bg-red-600' },
+      { id: 5, time: '16:00h - 17:00h', title: 'Porto Digital de Recife: Como criar um Polo de Referência em Inovação.', location: 'Auditório', speaker: 'Porto Digital', color: 'bg-pink-600' },
+      { id: 6, time: '17:00h - 18:00h', title: 'Computação Verde: Inteligência artificial para monitorar e conservar a biodiversidade amazônica.', location: 'Auditório', speaker: 'Vitor H. Gomes', color: 'bg-purple-600' }
     ],
     Oficinas: [
-      { id: 7, time: '10:00h - 12:30h', title: 'Automações Inteligentes para Apps Mobile', location: '', speaker: 'Escritório de Engenharia', color: 'bg-indigo-600' },
-      { id: 8, time: '10:30h - 12:30h', title: 'Quantum 101', location: '', speaker: 'Feynman', color: 'bg-red-600' },
+      { id: 7, time: '10:00h - 12:30h', title: 'Automações Inteligentes para Apps Mobile', location: 'Lab 10 - Escritório de Engenharia', speaker: 'Equipe Engenharia', color: 'bg-indigo-600' },
+      { id: 8, time: '10:30h - 12:30h', title: 'Quantum 101', location: 'Lab 08', speaker: 'Feynman', color: 'bg-red-600' },
       { id: 9, time: '14:00h - 17:00h', title: 'Mini Maratona de Programação', location: 'Subsolo', speaker: 'Feynman', color: 'bg-yellow-600' },
-      { id: 10, time: '17:30h - 19:30h', title: 'CyberSec', location: '', speaker: 'SiTech', color: 'bg-green-600' },
-      { id: 11, time: '17:30h - 20:30h', title: 'IA', location: '', speaker: 'Feynman', color: 'bg-blue-600' }
+      { id: 10, time: '17:30h - 19:30h', title: 'CyberSec: Gestão de Ciclo de Vida de Vulnerabilidades em Aplicações', location: 'Lab 08', speaker: 'SiTech', color: 'bg-green-600' },
+      { id: 11, time: '17:30h - 20:30h', title: 'Inteligência de Enxames: Computação Bioinspirada para Otimização de Problemas', location: 'Subsolo', speaker: 'Feynman', color: 'bg-blue-600' }
+    ],
+    Evento: [
+      { id: 12, time: '09:00h - 20:30h', title: 'Evento IARAS', location: 'Térreo', color: 'bg-fuchsia-600' }
     ],
     Campeonatos: [
-      { id: 12, time: '21:00h - 22:00h', title: 'Campeonatos', games: ['XADREZ', 'PING-PONG', 'PEBOLIM'], location: 'Hall Cesupa Argo', color: 'bg-red-700' }
+      { id: 13, time: '21:00h - 22:00h', title: 'Campeonatos', games: ['XADREZ', 'PING-PONG', 'PEBOLIM'], location: 'Térreo', color: 'bg-orange-700' }
     ]
   };
 
@@ -39,38 +41,23 @@ const App = () => {
               <div className="bg-blue-700 px-4 py-2 rounded-md">14 Outubro</div>
             </div>
           </div>
-
-         
         </div>
-
-        
 
         {/* Tabs */}
         <div className="flex justify-center mb-8 flex-wrap gap-2">
-          <button 
-            onClick={() => setActiveTab('Palestras')}
-            className={`px-6 py-2 mx-2 rounded-md transition-colors ${
-              activeTab === 'Palestras' ? 'bg-purple-600 text-white' : 'bg-purple-700 hover:bg-purple-600'
-            }`}
-          >
-            Palestras
-          </button>
-          <button 
-            onClick={() => setActiveTab('Oficinas')}
-            className={`px-6 py-2 mx-2 rounded-md transition-colors ${
-              activeTab === 'Oficinas' ? 'bg-blue-600 text-white' : 'bg-blue-700 hover:bg-blue-600'
-            }`}
-          >
-            Oficinas
-          </button>
-          <button 
-            onClick={() => setActiveTab('Campeonatos')}
-            className={`px-6 py-2 mx-2 rounded-md transition-colors ${
-              activeTab === 'Campeonatos' ? 'bg-red-600 text-white' : 'bg-red-700 hover:bg-red-600'
-            }`}
-          >
-            Campeonatos
-          </button>
+          {Object.keys(eventsData).map(tab => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`px-6 py-2 mx-2 rounded-md transition-colors ${
+                activeTab === tab 
+                  ? 'bg-purple-600 text-white' 
+                  : 'bg-purple-700 hover:bg-purple-600'
+              }`}
+            >
+              {tab}
+            </button>
+          ))}
         </div>
 
         {/* Events Grid */}
