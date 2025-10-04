@@ -7,10 +7,10 @@ const App = () => {
     Palestras: [
       { id: 1, time: '09:30h - 10:30h', title: 'Rota Norte da IA: Por que o AI Center da VALE em Belém muda o mapa da inovação para o mundo.', location: 'Auditório', speaker: 'VALE', color: 'bg-amber-600' },
       { id: 2, time: '11:00h - 12:00h', title: 'Do CESUPA pro Squad: Trajetórias reais de alunos contratados pela DTI.', location: 'Auditório', speaker: 'DTI', color: 'bg-blue-600' },
-      { id: 3, time: '14:00h - 15:00h', title: 'Customer 360 com propósito: como Accenture acelera valor no Salesforce.', location: 'Auditório', speaker: 'Accenture', color: 'bg-green-600' },
+      { id: 3, time: '14:00h - 15:00h', title: 'Customer 360 com propósito: como Accenture acelera valor no Salesforce.', location: 'Auditório', speaker: 'Accenture', color: 'bg-purple-600' },
       { id: 4, time: '15:00h - 16:00h', title: 'Construindo Espaços: A relevância da BELJOGOS no cenário GameDev BR.', location: 'Auditório', speaker: 'BELJOGOS', color: 'bg-red-600' },
       { id: 5, time: '16:00h - 17:00h', title: 'Porto Digital de Recife: Como criar um Polo de Referência em Inovação.', location: 'Auditório', speaker: 'Porto Digital', color: 'bg-pink-600' },
-      { id: 6, time: '17:00h - 18:00h', title: 'Computação Verde: Inteligência artificial para monitorar e conservar a biodiversidade amazônica.', location: 'Auditório', speaker: 'Vitor H. Gomes', color: 'bg-purple-600' }
+      { id: 6, time: '17:00h - 18:00h', title: 'Computação Verde: Inteligência artificial para monitorar e conservar a biodiversidade amazônica.', location: 'Auditório', speaker: 'Vitor H. Gomes', color: 'bg-green-600' }
     ],
     Oficinas: [
       { id: 7, time: '10:00h - 12:30h', title: 'Automações Inteligentes para Apps Mobile', location: 'Lab 10 - Escritório de Engenharia', speaker: 'Equipe Engenharia', color: 'bg-indigo-600' },
