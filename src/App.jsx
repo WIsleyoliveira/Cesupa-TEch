@@ -94,7 +94,7 @@ const App = () => {
               className="w-48 h-48 border-4 border-white rounded-lg"
             />
           </div>
-          <p className="mt-4 text-blue-200">https://tickzi.com.br/eventos/cesupatechsummit</p>
+        
         </div>
       </div>
     </div>
